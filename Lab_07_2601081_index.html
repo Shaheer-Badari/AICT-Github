@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="student-info">
+        <p>Muhammad Shaheer Ishfaq | 2601081 | BSAI Evening</p>
+    </div>
+
+    <div class="registration-form">
+        <h1>Student Registration Form</h1>
+
+        <form class="form-body" action="#" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fathername">Father's Name</label>
+                <input type="text" id="fathername" name="fathername" placeholder="Enter your father's name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="regno">Registration Number</label>
+                <input type="text" id="regno" name="regno" placeholder="e.g. 2601081" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" minlength="6" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Re-enter password" minlength="6" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <span class="field-title">Gender</span>
+                <div class="radio-group">
+                    <label class="option-label" for="male">
+                        <input type="radio" id="male" name="gender" value="Male" required> Male
+                    </label>
+                    <label class="option-label" for="female">
+                        <input type="radio" id="female" name="gender" value="Female"> Female
+                    </label>
+                    <label class="option-label" for="other">
+                        <input type="radio" id="other" name="gender" value="Other"> Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="">-- Select Department --</option>
+                    <option value="BSSE">BSSE</option>
+                    <option value="BSAI">BSAI</option>
+                    <option value="BSDS">BSDS</option>
+                    <option value="BSCS">BSCS</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="semester">Semester</label>
+                <select id="semester" name="semester" required>
+                    <option value="">-- Select Semester --</option>
+                    <option value="1">1st</option>
+                    <option value="2">2nd</option>
+                    <option value="3">3rd</option>
+                    <option value="4">4th</option>
+                    <option value="5">5th</option>
+                    <option value="6">6th</option>
+                    <option value="7">7th</option>
+                    <option value="8">8th</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="03XX-XXXXXXX" pattern="[0-9]{4}-?[0-9]{7}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Permanent Address</label>
+                <textarea id="address" name="address" rows="3" placeholder="Enter your permanent address" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="profile">Profile Picture</label>
+                <input type="file" id="profile" name="profile" accept="image/*">
+            </div>
+
+            <div class="form-group terms">
+                <span class="field-title"></span>
+                <label class="option-label" for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the Terms and Conditions
+                </label>
+            </div>
+
+            <div class="form-group button-group">
+                <span class="field-title"></span>
+                <div class="buttons">
+                    <button type="submit" class="btn btn-register">Register</button>
+                    <button type="reset" class="btn btn-reset">Reset</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

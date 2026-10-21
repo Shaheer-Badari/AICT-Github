@@ -1,0 +1,193 @@
+/* ---------- Universal Selector ---------- */
+* {
+    box-sizing: border-box;
+}
+
+/* ---------- Page ---------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ---------- Student Info (top of page) ---------- */
+.student-info {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 15px auto;
+    text-align: center;
+}
+
+.student-info p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* ---------- Form Container ---------- */
+.registration-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Inner spacing so fields never touch the container edge */
+.form-body {
+    padding: 10px 25px 20px 25px;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+    color: #1e3a8a;
+    font-size: 28px;
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+/* ---------- Rows: label on the left, field on the right ---------- */
+.form-group {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    align-items: center;
+    column-gap: 15px;
+    margin-bottom: 14px;
+}
+
+/* ---------- Labels ---------- */
+label,
+.field-title {
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* ---------- Inputs, Selects, Textarea ---------- */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    min-height: 34px;
+    padding: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Textarea row: keep label aligned to the top */
+.form-group:has(textarea) {
+    align-items: start;
+}
+
+.form-group:has(textarea) label {
+    padding-top: 7px;
+}
+
+/* ---------- Focus Effect ---------- */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+/* ---------- Radio Buttons & Checkbox ---------- */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.option-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.option-label input {
+    margin: 0;
+}
+
+/* ---------- Buttons ---------- */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 5px;
+    min-height: 36px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register {
+    background-color: #2563eb;
+}
+
+.btn-register:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-reset {
+    background-color: #6b7280;
+}
+
+.btn-reset:hover {
+    background-color: #4b5563;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 520px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .form-body {
+        padding: 10px 15px 20px 15px;
+    }
+
+    /* Stack label above field on small screens */
+    .form-group {
+        grid-template-columns: 1fr;
+        row-gap: 5px;
+    }
+
+    .field-title:empty {
+        display: none;
+    }
+
+    .form-group:has(textarea) label {
+        padding-top: 0;
+    }
+}
